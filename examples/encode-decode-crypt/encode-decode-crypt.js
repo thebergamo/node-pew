@@ -1,16 +1,16 @@
-var pew = require('../../lib/pew');
+var Pew = require('../../lib/pew');
 var fs = require('fs');
 var keys = {
   public : fs.readFileSync(__dirname + '/keys/public_key.pem', 'utf8'),
   private : fs.readFileSync(__dirname + '/keys/private_key.pem', 'utf8')
 }
-var Pew = new pew(keys);
+var pew = new Pew(keys);
 console.log('Encoding Image');
-Pew.encode(__dirname + '/nodejs.png', function(err, encodedImage){
+pew.encode(__dirname + '/nodejs.png', function(err, encodedImage){
   if(err) throw err;
 
   console.log('Image encoded');
-  Pew.decode(encodedImage, function(err, buff){
+  pew.decode(encodedImage, function(err, buff){
     if(err) throw err;
 
     console.log('Decoding image');

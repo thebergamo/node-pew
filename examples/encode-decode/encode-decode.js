@@ -1,12 +1,12 @@
-var pew = require('../../lib/pew');
+var Pew = require('../../lib/pew');
 var fs = require('fs');
-var Pew = new pew();
+var pew = new Pew();
 console.log('Encoding Image');
-Pew.encode(__dirname + '/nodejs.png', function(err, encodedImage){
+pew.encode(__dirname + '/nodejs.png', function(err, encodedImage){
   if(err) throw err;
 
   console.log('Image encoded');
-  Pew.decode(encodedImage, function(err, buff){
+  pew.decode(encodedImage, function(err, buff){
     if(err) throw err;
 
     console.log('Decoding image');
