@@ -1,0 +1,33 @@
+{
+  "name": "pew",
+  "version": "0.0.1",
+  "description": "An powerfull way to transfer images using the Google's Protocol Buffer and secure data using RSA keys.",
+  "main": "./lib/pew.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcosbergamo/node-pew.git"
+  },
+  "keywords": [
+    "pew",
+    "protobuffer",
+    "protobuf",
+    "protobufjs",
+    "rsa",
+    "images",
+    "image",
+    "base64"
+  ],
+  "author": "Marcos Bérgamo <marcos@thedon.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcosbergamo/node-pew/issues"
+  },
+  "homepage": "https://github.com/marcosbergamo/node-pew",
+  "dependencies": {
+    "protobufjs": "^3.8.2",
+    "ursa": "^0.8.0"
+  }
+}
